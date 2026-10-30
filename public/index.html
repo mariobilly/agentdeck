@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentDeck</title>
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/vendor/xterm.css">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+        <rect x="1" y="1" width="11" height="11" rx="3" fill="url(#lg)"/><rect x="14" y="1" width="11" height="11" rx="3" fill="url(#lg)" opacity=".55"/>
+        <rect x="1" y="14" width="11" height="11" rx="3" fill="url(#lg)" opacity=".55"/><rect x="14" y="14" width="11" height="11" rx="3" fill="url(#lg)" opacity=".85"/></svg>
+      <b>AgentDeck</b>
+    </div>
+    <div class="crumbs" id="crumbs"></div>
+    <div class="actions">
+      <div class="seg" id="columns" title="Panes per row"></div>
+      <button class="btn" id="togglePreview" title="Show the site from the main folder, an agent's copy or a dev server">Preview</button>
+      <button class="btn" id="toggleBoard" title="Show or hide the task board">Board</button>
+      <button class="btn" id="addShell" title="A plain PowerShell pane in the project folder">+ Terminal</button>
+      <button class="btn primary" id="addAgent">+ Agent</button>
+    </div>
+  </header>
+
+  <aside class="side">
+    <div class="st">Projects <button class="link" id="addProject">+ Add</button></div>
+    <div id="projects"></div>
+    <div class="st">Agents <span id="agentCount"></span></div>
+    <div id="agents"></div>
+    <div class="foot">
+      <div class="foot-row"><span class="dot lock"></span>Local only: runs on 127.0.0.1</div>
+      <div class="foot-row" id="alertsRow"></div>
+    </div>
+  </aside>
+
+  <main class="main" id="main"></main>
+</div>
+
+<div class="modal-wrap" id="modal" hidden><div class="modal" id="modalBody"></div></div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="/vendor/xterm.js"></script>
+<script src="/vendor/addon-fit.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
