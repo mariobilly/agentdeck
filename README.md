@@ -7,6 +7,17 @@ review and merge each agent's branch from inside the app.
 
 ![AgentDeck](docs/screenshot.png)
 
+<!-- videos:start -->
+## See it in action
+
+<table><tr>
+<td width="64%" valign="top"><a href="docs/videos/tutorial.mp4"><img src="docs/videos/tutorial.jpg" alt="Full tutorial"></a><br><b>▶ <a href="docs/videos/tutorial.mp4">Full tutorial</a></b> (2:53, narrated, with captions)</td>
+<td width="36%" valign="top" align="center"><a href="docs/videos/ad.mp4"><img src="docs/videos/ad.gif" alt="25-second reel" width="240"></a><br><b>▶ <a href="docs/videos/ad.mp4">25-second reel</a></b></td>
+</tr></table>
+
+Click any picture to play the video with sound.
+<!-- videos:end -->
+
 - **Local only.** The server listens on `127.0.0.1:4646`. Other websites can't talk to it (Host, Origin and
   custom-header checks).
 - **Your Claude Code, as it is.** Agents are ordinary `claude` sessions, signed in the same way as your own Claude Code.
